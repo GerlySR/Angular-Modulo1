@@ -7,6 +7,17 @@
     <div class="card-desc">
       <h3>{{destino.nombre}}</h3>
       <p> Servicios</p>
+      <div>
+        <a href="#" (click)="voteUp()" appTrackearClick data-trackear-tags="destino_vote_up lista_destinos_item">
+            <i class="material-icons md-18">thumb_up</i>
+        </a>
+        &nbsp;
+        <a href="#" (click)="voteDown()" appTrackearClick data-trackear-tags="destino_vote_down lista_destinos_item">
+            <i class="material-icons md-18">thumb_down</i>
+        </a>
+        &nbsp;
+        Votos: {{destino.votes}}
+    </div>
       <ul>
         <li *ngFor="let s of destino.servicios">
           <span [ngSwitch]="s">
@@ -19,7 +30,7 @@
       <a href="#" class="btn-card"(click)="ir()">Ir</a>
       <span *ngIf="destino.isSelected()">
         <span ngNonBindable>
-          {{PREFERIDO}}
+          {{ PREFERIDO! }}
         </span>
         <a [routerLink]="['/destino']">Ver Detalle</a>
       </span>
