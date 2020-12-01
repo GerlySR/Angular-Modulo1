@@ -7,9 +7,9 @@ import {
   Output,
 } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AppState } from '../app.module';
-import { DestinoViaje } from '../models/destino-viaje.model';
-import { VoteDownAction, VoteUpAction } from '../models/destinos-viajes-state.models';
+import { AppState } from '../../app.module';
+import { DestinoViaje } from '../../models/destino-viaje.model';
+import { VoteDownAction, VoteUpAction } from '../../models/destinos-viajes-state.models';
 
 @Component({
   selector: 'app-destino-viaje',
